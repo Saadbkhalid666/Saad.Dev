@@ -1,3 +1,8 @@
+ # Saad.Dev
+Built to showcase my journey, projects, and skills as a Full-Stack Web Developer (MERN & Django), this site is a digital reflection of who I am and what I love to build! 🚀
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
