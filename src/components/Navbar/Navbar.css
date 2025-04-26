@@ -1,0 +1,17 @@
+ /* Active link styling (for text color) */
+ .active-link {
+    color: #ffff70 !important; /* Highlight the active link text */
+  }
+  
+  /* Underline animation for active link */
+  .active-link span {
+    width: 100% !important; /* Full width when active */
+    transition: width 0.3s ease; /* Smooth transition for underline */
+  }
+  
+  /* Non-active link underline (invisible) */
+  li span {
+    width: 0;
+    transition: width 0.3s ease;
+  }
+  

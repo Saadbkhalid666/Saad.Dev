@@ -1,0 +1,13 @@
+.heading{
+    position: relative;
+}
+
+.heading::after{
+content: "";
+position: absolute;
+left: 0;
+width: 2px;
+height: 4rem;
+background-color: blue;
+}
+

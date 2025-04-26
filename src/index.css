@@ -1,0 +1,17 @@
+ 
+ @import "tailwindcss";
+
+
+body{
+    background-color: #121212;
+}
+/* Add neon glow effect */
+.neon-icon {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .neon-icon:hover {
+    transform: scale(1.2);
+  }
+  
