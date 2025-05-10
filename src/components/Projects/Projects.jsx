@@ -22,61 +22,51 @@ export const Projects = () => {
         </div>
 
         <div
-          data-aos="zoom-in"
-          className="projects-container flex justify-between md:flex-row flex-col mt-20"
-        >
-          {/* Project 1 */}
-          <div className="project-1-container md:w-[30%] flex flex-col lg:ml-10 m-4 rounded-2xl shadow-md px-4 py-4 relative group">
-            <div className="image-container flex justify-center relative overflow-hidden rounded-2xl">
+          data-aos="fade"
+          className="projects-container  flex justify-between md:flex-row flex-col  mt-40 mb-20"
+        > <section className="w-full px-4 py-10">
+        <div className="flex flex-wrap lg:justify-between justify-center gap-10">
+          
+          {/* SKYCAST CARD */}
+          <div className="relative w-full sm:w-[300px] md:w-[400px] group overflow-hidden rounded-lg">
+            <div className="image-container">
               <img
-                src="/images/ks-traders.PNG"
-                alt="KS TRADERS IMAGE"
-                className="w-77 transition-all duration-500 group-hover:blur-sm"
+                src="images/Weather app.PNG"
+                alt="skycast image"
+                className="h-48 sm:h-56 md:h-64 w-full object-cover transition duration-500 ease-in-out group-hover:blur-sm group-active:blur-sm  group-active:brightness-75 group-hover:brightness-75"
               />
-              <div className="overlay absolute inset-0 bg-[#ffff70] opacity-0 group-hover:opacity-80 transition-all duration-500"></div>
             </div>
-            <div className="projects-content-container absolute inset-0 text-center text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-              <h1 className="text-lg text-gray-800">
-                <span className="text-2xl text-[#ffff70] inline mr-1">
-                  KS TRADERS
-                </span>
-                is a responsive MERN stack e-commerce site with secure orders
-                and email notifications.
-              </h1>
-              <a
-                href="https://kstraders.vercel.app/"
-                className="link text-[#ffff70] mt-6 hover:text-white transition-all"
-              >
-                🔗 Visit Website
-              </a>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-black/40">
+              <h1 className="text-[#ffff70] text-2xl font-bold">SKYCAST</h1>
+              <p className="text-white text-sm mt-2">
+                SkyCast is a fast, user-friendly weather web app that provides real-time
+                weather updates and forecasts for any city worldwide.
+              </p>
             </div>
           </div>
-
-          {/* Project 2 */}
-          <div className="project-1-container md:w-[30%] flex flex-col md:mr-10 m-4 rounded-2xl shadow-md px-4 py-4 relative group">
-            <div className="image-container flex justify-center relative overflow-hidden rounded-2xl">
+      
+          {/* KS TRADERS CARD */}
+          <div className="relative w-full sm:w-[300px] md:w-[400px] group overflow-hidden rounded-lg">
+            <div className="image-container">
               <img
-                src="/images/Weather app.PNG"
-                alt="SKY CAST IMAGE"
-                className="w-77 transition-all duration-500 group-hover:blur-sm"
+                src="images/ks-traders.PNG"
+                alt="ks traders image"
+                className="h-48 sm:h-56 md:h-64 w-full object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-75 group-active:blur-sm  group-active:brightness-75"
               />
-              <div className="overlay absolute inset-0 bg-[#ffff70] opacity-0 group-hover:opacity-80 transition-all duration-500"></div>
             </div>
-            <div className="projects-content-container absolute inset-0 text-center text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-              <h1 className="text-lg text-gray-800">
-                <span className="text-2xl text-[#ffff70] inline mr-1">SkyCast </span>
-                is a simple weather app where you can enter your city name to
-                get real-time weather updates and forecasts.
-              </h1>
-              <a
-                href="https://skycast.free.nf/?i=1"
-                className="link text-[#ffff70] mt-6 hover:text-white transition-all"
-              >
-                🔗 Visit Website
-              </a>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-black/40">
+              <h1 className="text-[#ffff70] text-2xl font-bold">KS TRADERS</h1>
+              <p className="text-white text-sm mt-2">
+                KS Traders is a full-stack e-commerce website built using the MERN stack. It provides a secure shopping experience, real-time product control, and email notifications — all mobile-friendly and stylish.
+              </p>
             </div>
           </div>
+      
         </div>
+      </section>
+      
+
+         </div>
       </div>
     </section>
   );
