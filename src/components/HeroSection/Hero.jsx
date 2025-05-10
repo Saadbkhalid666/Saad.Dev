@@ -2,7 +2,7 @@ import "./Hero.css";
 export const Hero = () => {
   return (
     <section id="home">
-      <div className="hero-section-container mb-55 mt-[70%] md:ml-10 md:mr-10 flex flex-col md:flex-row md:mt-[20%] justify-center ">
+      <div className="hero-section-container mb-55 pt-[70%] md:pt-[20%] md:ml-10 md:mr-10 flex flex-col md:flex-row  justify-center ">
         <div className="content-container  md:w-[80%] ml-5 mr-5 ">
           <div className="heading-container md:w-[max-content] mb-4">
             <h1 className="typing-heading text-2xl text-[#ffff70] font-extrabold font-serif overflow-hidden whitespace-nowrap border-r-2 border-[#ffff70] max-w-full">
