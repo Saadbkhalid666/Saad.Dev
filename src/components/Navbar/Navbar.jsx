@@ -6,10 +6,10 @@ import "./Navbar.css"; // Import custom CSS
 export function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
 
-  const navItems = ["HOME", "ABOUT","EDUCATION", "SKILLS", "PROJECTS", "CONTACT"];
+  const navItems = ["HOME", "ABOUT", "SKILLS", "SERVICES", "PROJECTS", "CONTACT"];
 
   return (
-    <nav className="bg-black/70 backdrop-blur-lg text-white px-4 py-3 fixed top-0 left-0 w-full z-50 border-b-2 border-b-[#ffff70]">
+    <nav className="bg-black/20 backdrop-blur-sm text-white px-4 py-3 fixed top-0 left-0 w-full z-50 border-b-2 border-b-[#ffff70]">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold">Saad.Dev</h1>
 

@@ -8,6 +8,7 @@ export const Projects = () => {
     AOS.init(); // Initialize AOS when the component mounts
     AOS.refresh(); // Refresh AOS to recalculate the scroll positions
   }, []);
+
   return (
     <section id="projects">
       <div className="projects-section-container mt-55">
@@ -24,52 +25,54 @@ export const Projects = () => {
           data-aos="zoom-in"
           className="projects-container flex justify-between md:flex-row flex-col mt-20"
         >
-          <div className="project-1-container md:w-[30%] flex flex-col lg:ml-10 m-4 rounded-2xl  shadow-md px-4 py-4">
-            <div className="image-container flex justify-center">
+          {/* Project 1 */}
+          <div className="project-1-container md:w-[30%] flex flex-col lg:ml-10 m-4 rounded-2xl shadow-md px-4 py-4 relative group">
+            <div className="image-container flex justify-center relative overflow-hidden rounded-2xl">
               <img
                 src="/images/ks-traders.PNG"
                 alt="KS TRADERS IMAGE"
-                className="w-77 "
+                className="w-77 transition-all duration-500 group-hover:blur-sm"
               />
+              <div className="overlay absolute inset-0 bg-[#ffff70] opacity-0 group-hover:opacity-80 transition-all duration-500"></div>
             </div>
-            <div className="projects-content-container mt-5 ">
-              <h1 className="text-lg text-gray-600">
-                <p className="text-2xl text-[#ffff70] inline mr-1 ">
+            <div className="projects-content-container absolute inset-0 text-center text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+              <h1 className="text-lg text-gray-800">
+                <span className="text-2xl text-[#ffff70] inline mr-1">
                   KS TRADERS
-                </p>
+                </span>
                 is a responsive MERN stack e-commerce site with secure orders
                 and email notifications.
               </h1>
               <a
                 href="https://kstraders.vercel.app/"
-                className="link text-blue-400 mt-6"
+                className="link text-[#ffff70] mt-6 hover:text-white transition-all"
               >
-                {" "}
-                🔗 kstraders.vercel.app
+                🔗 Visit Website
               </a>
             </div>
           </div>
-          {/* second card */}
-          <div className="project-1-container md:w-[30%] flex flex-col md:mr-10  m-4 rounded-2xl shadow-md px-4 py-4">
-            <div className="image-container flex justify-center">
+
+          {/* Project 2 */}
+          <div className="project-1-container md:w-[30%] flex flex-col md:mr-10 m-4 rounded-2xl shadow-md px-4 py-4 relative group">
+            <div className="image-container flex justify-center relative overflow-hidden rounded-2xl">
               <img
                 src="/images/Weather app.PNG"
                 alt="SKY CAST IMAGE"
-                className="w-77 "
+                className="w-77 transition-all duration-500 group-hover:blur-sm"
               />
+              <div className="overlay absolute inset-0 bg-[#ffff70] opacity-0 group-hover:opacity-80 transition-all duration-500"></div>
             </div>
-            <div className="projects-content-container mt-5 ">
-              <h1 className="text-lg text-gray-600">
-                <p className="text-2xl text-[#ffff70] inline mr-1 ">SkyCast </p>
+            <div className="projects-content-container absolute inset-0 text-center text-white flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+              <h1 className="text-lg text-gray-800">
+                <span className="text-2xl text-[#ffff70] inline mr-1">SkyCast </span>
                 is a simple weather app where you can enter your city name to
                 get real-time weather updates and forecasts.
               </h1>
               <a
                 href="https://skycast.free.nf/?i=1"
-                className="link text-blue-400 mt-6"
+                className="link text-[#ffff70] mt-6 hover:text-white transition-all"
               >
-                {" "}
-                🔗 skycast.free.nf
+                🔗 Visit Website
               </a>
             </div>
           </div>
