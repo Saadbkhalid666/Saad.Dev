@@ -44,7 +44,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {navOpen && (
-        <ul className="md:hidden mt-4 space-y-3 flex flex-col bg-black p-4 rounded-md">
+        <ul className="md:hidden mt-4 space-y-3 flex flex-col  bg-black/20 backdrop-blur-sm p-4 rounded-md">
           {navItems.map((item) => (
             <li key={item} className="relative">
               <Link

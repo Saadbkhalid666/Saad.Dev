@@ -1,7 +1,13 @@
-export const WelcomeScreen = ({ onEnter }) => {
-    const handleClick = () => {
-      // Check if the audio has already been played
-      const hasPlayed = sessionStorage.getItem("WelcomeAudioPlayed");
+import { useState } from "react";
+import Loader from "../../components/Loader/Loader"
+ export const WelcomeScreen = ({ onEnter }) => {
+  const [showLoader, setShowLoader] = useState(false);
+  const [showButton, setShowButton] = useState(true);
+
+  const handleClick = () => {
+    setShowButton(false);
+    setShowLoader(true);
+          const hasPlayed = sessionStorage.getItem("WelcomeAudioPlayed");
   
       if (!hasPlayed) {
         // If audio hasn't been played, play it
@@ -23,23 +29,32 @@ export const WelcomeScreen = ({ onEnter }) => {
         // If audio was already played, just trigger onEnter
         onEnter();
       }
-    };
-  
-    return (
-      <div className="relative w-screen h-screen">
-        <img
-          src="/images/remove-bg-logo.png"
-          alt="Centered"
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        />
-        
-        <button 
-          onClick={handleClick} 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 rounded-md shadow-md focus:bg-white focus:text-black transition duration-150 hover:bg-white hover:text-black"
+    
+
+    setTimeout(() => {
+      setShowLoader(false);
+      onEnter(); // tell App.jsx to enter site
+    }, 3000);
+  };
+
+  return (
+    <div className="relative w-screen h-screen ">
+      <img
+        src="/images/remove-bg-logo.png"
+        alt="Logo"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      />
+
+      {showButton && (
+        <button
+          onClick={handleClick}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 rounded-md hover:bg-white hover:cursor-pointer hover:text-black transition duration-150"
         >
           GET STARTED
         </button>
-      </div>
-    );
-  };
-  
+      )}
+
+      {showLoader && <Loader />}
+    </div>
+  );
+};
