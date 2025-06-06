@@ -1,72 +1,66 @@
+import kstraders from "/images/ks-traders.PNG";
+import mrsenterprise from "/images/mrsenterprise.PNG";
+import snr from "/images/snr.PNG";
 import { FaProjectDiagram } from "react-icons/fa";
-import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
-import { useEffect } from "react";
+import { FaEye } from "react-icons/fa";
+
 
 export const Projects = () => {
-  useEffect(() => {
-    AOS.init(); // Initialize AOS when the component mounts
-    AOS.refresh(); // Refresh AOS to recalculate the scroll positions
-  }, []);
+  const cardsItems = [
+    {
+      title: "KS TRADERS",
+      category: "Web Development",
+      href: "https://kstraders.vercel.app/",
+      url: kstraders,
+    },
+    {
+      title: "MRS ENTERPRISES",
+      category: "Web Development",
+      href: "https://mrsenterprise.vercel.app/",
+      url: mrsenterprise,
+    },
+    {
+      title: "SNR",
+      category: "Web Development",
+      href: "https://snrhub.vercel.app/",
+      url: snr,
+    },
+  ];
 
   return (
-    <section id="projects">
-      <div className="projects-section-container mt-55">
-        <div className="projects-heading-container">
-          <h1
-            data-aos="fade"
-            className="projects-heading text-3xl text-center text-[#ffff70] font-extrabold font-serif"
-          >
-            <FaProjectDiagram className="inline" /> My Projects
-          </h1>
-        </div>
+    <section id="projects" className="mt-[15%] mb-[5%] px-6">
+      <h1 className="text-3xl text-[#ffff70] flex flex-row justify-center items-center font-extrabold font-sans mb-12">
+        <FaProjectDiagram className="inline mr-2 text-4xl" />
+        OUR PROJECTS
+      </h1>
 
-        <div
-          data-aos="fade"
-          className="projects-container  flex justify-between md:flex-row flex-col  mt-40 mb-20"
-        > <section className="w-full px-4 py-10">
-        <div className="flex flex-wrap lg:justify-between justify-center gap-10">
-          
-          {/* SKYCAST CARD */}
-          <div className="relative w-full sm:w-[300px] md:w-[400px] group overflow-hidden rounded-lg">
-            <div className="image-container">
-              <img
-                src="images/Weather app.PNG"
-                alt="skycast image"
-                className="h-48 sm:h-56 md:h-64 w-full object-cover transition duration-500 ease-in-out group-hover:blur-sm group-active:blur-sm  group-active:brightness-75 group-hover:brightness-75"
-              />
-            </div>
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-black/40">
-              <h1 className="text-[#ffff70] text-2xl font-bold">SKYCAST</h1>
-              <p className="text-white text-sm mt-2">
-                SkyCast is a fast, user-friendly weather web app that provides real-time
-                weather updates and forecasts for any city worldwide.
-              </p>
-            </div>
-          </div>
-      
-          {/* KS TRADERS CARD */}
-          <div className="relative w-full sm:w-[300px] md:w-[400px] group overflow-hidden rounded-lg">
-            <div className="image-container">
-              <img
-                src="images/ks-traders.PNG"
-                alt="ks traders image"
-                className="h-48 sm:h-56 md:h-64 w-full object-cover transition duration-500 ease-in-out group-hover:blur-sm group-hover:brightness-75 group-active:blur-sm  group-active:brightness-75"
-              />
-            </div>
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 bg-black/40">
-              <h1 className="text-[#ffff70] text-2xl font-bold">KS TRADERS</h1>
-              <p className="text-white text-sm mt-2">
-                KS Traders is a full-stack e-commerce website built using the MERN stack. It provides a secure shopping experience, real-time product control, and email notifications — all mobile-friendly and stylish.
-              </p>
-            </div>
-          </div>
-      
-        </div>
-      </section>
-      
+      <div className="projects-cards-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cardsItems.map(({ title, category, href, url }, index) => (
+          <div
+  className="container group relative bg-black text-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300"
+  key={index}
+>
+  <a href={href} target="_blank" rel="noopener noreferrer" className="block relative">
+    <img
+      src={url}
+      alt={title}
+      className="w-full h-48 object-cover"
+    />
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-[#ffff70] mb-2">
+        {title}
+      </h2>
+      <p className="text-gray-300 text-sm">{category}</p>
+    </div>
 
-         </div>
+    {/* Eye icon */}
+    <span className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 group-hover:opacity-100 text-[#ffff70] text-2xl  transition duration-300 ease-in-out bg-black/50 w-[100%] h-[100%] flex justify-center items-center ">
+      <FaEye />
+    </span>
+  </a>
+</div>
+
+        ))}
       </div>
     </section>
   );
