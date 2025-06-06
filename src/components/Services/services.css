@@ -1,0 +1,61 @@
+.card-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 70vw;
+    max-width: 400px;
+    max-height: 500px;
+    padding: 2px;
+    margin: 20px;
+    background: transparent; /* very important: no white here */
+    overflow: visible;
+    border-radius: 10px;
+}
+
+ 
+
+.card-box::before,
+.card-box::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 10px;
+    z-index: -1; /* -1 is enough */
+    background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    #ffff70 60deg, /* was 20deg → now glow is 60deg long */
+    transparent 80deg, /* was 40deg → adjusted to match */
+    transparent 160deg,
+    #ffff70 240deg, /* was 180deg → now glow is 60deg long again */
+    transparent 260deg,
+    transparent 360deg
+);
+
+    animation: glowing-border 3.5s linear infinite;
+}
+
+.card-box::after {
+    z-index: -2;
+    animation: glowing-border 3.5s linear infinite;
+}
+
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 53deg;
+    inherits: false;
+}
+
+@keyframes glowing-border {
+    from {
+        --angle: 53deg;
+    }
+    to {
+        --angle: 413deg;
+    }
+}
+
+ 
