@@ -47,7 +47,7 @@ export const Hero = () => {
         <div className="image-container shadow-sm rounded-tl-2xl  rounded-tr-4xl rounded-br-2xl rounded-bl-4xl invisible md:visible">
           <img
             src="/images/my-image.webp"
-            className="h-55 rounded-tl-2xl  rounded-tr-4xl rounded-br-2xl rounded-bl-4xl "
+            className="h-55 rounded-full hover:scale-110 duration-150 transition-all"
             alt="my-image"
           />
         </div>
