@@ -1,36 +1,69 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const { name, email, message } = formData;
 
-    if (!name || !email || !message) {
-      toast.error("Please fill in all fields 😓");
-      return;
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const { name, email, message } = formData;
+
+  if (!name || !email || !message) {
+    toast.error("Please fill in all fields 😓");
+    return;
+  }
+
+  try {
+    const form = new FormData();
+    form.append("name", name);
+    form.append("email", email);
+    form.append("message", message);
+
+    const res = await axios.post("http://127.0.0.1:8000/contact/", form);
+
+    console.log("Response data:", res.data);
+
+    if (res.data.status === "success") {
+      toast.success("Message sent successfully 🚀");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      toast.error(`Something went wrong 🥺: ${res.data.message || ""}`);
     }
+  } catch (error) {
+    toast.error("Network error 😢");
+    console.error("Error sending message:", error);
+  }
+};
 
-    toast.success("Message sent successfully 🚀");
-    setFormData({ name: "", email: "", message: "" });
-  };
 
   return (
     <section id="contact" className="relative">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#121212] to-[#1a1a1a] px-4 py-12">
         <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Contact Me 📬</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+            Contact Me 📬
+          </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-gray-600 mb-1">Name</label>
+              <label className="block text-sm font-semibold text-gray-600 mb-1">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -41,7 +74,9 @@ export const Contact = () => {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-600 mb-1">Email</label>
+              <label className="block text-sm font-semibold text-gray-600 mb-1">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -52,7 +87,9 @@ export const Contact = () => {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold text-gray-600 mb-1">Message</label>
+              <label className="block text-sm font-semibold text-gray-600 mb-1">
+                Message
+              </label>
               <textarea
                 name="message"
                 rows="4"

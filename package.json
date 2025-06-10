@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.4",
     "aos": "^2.3.4",
+    "axios": "^1.9.0",
     "framer-motion": "^12.9.2",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.2.0",
