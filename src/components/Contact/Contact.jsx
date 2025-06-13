@@ -34,7 +34,7 @@ const handleSubmit = async (e) => {
     form.append("email", email);
     form.append("message", message);
 
-    const res = await axios.post("http://127.0.0.1:8000/contact/", form);
+    const res = await axios.post("https://saaddevbackend.onrender.com/contact/", form);
 
     console.log("Response data:", res.data);
 
