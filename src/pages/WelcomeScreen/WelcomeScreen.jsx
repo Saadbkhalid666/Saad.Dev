@@ -1,6 +1,8 @@
 import { useState } from "react";
+import logo from "../../assets/images/remove-bg-logo.png"
 import Loader from "../../components/Loader/Loader"
- export const WelcomeScreen = ({ onEnter }) => {
+import sound from "../../assets/audio/welcomevoice.mp3"
+export const WelcomeScreen = ({ onEnter }) => {
   const [showLoader, setShowLoader] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
@@ -11,7 +13,7 @@ import Loader from "../../components/Loader/Loader"
   
       if (!hasPlayed) {
         // If audio hasn't been played, play it
-        const audio = new Audio("/audio/welcomevoice.mp3");
+        const audio = new Audio(sound);
         
         audio
           .play()
@@ -40,7 +42,7 @@ import Loader from "../../components/Loader/Loader"
   return (
     <div className="relative w-screen h-screen ">
       <img
-        src="/images/remove-bg-logo.png"
+        src={logo}
         alt="Logo"
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />

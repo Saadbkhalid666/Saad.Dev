@@ -1,6 +1,6 @@
-import kstraders from "/images/ks-traders.PNG";
-import mrsenterprise from "/images/mrsenterprise.PNG";
-import snr from "/images/snr.PNG";
+import kstraders from "../../assets/images/ks-traders.PNG";
+import mrsenterprise from "../../assets/images/mrsenterprise.PNG";
+import snr from "../../assets/images/snr.PNG";
 import { FaProjectDiagram } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
