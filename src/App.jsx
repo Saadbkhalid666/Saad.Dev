@@ -11,6 +11,7 @@
  import {Contact} from "./components/Contact/Contact"
  import {Footer} from "./components/Footer/Footer"
 import { Services } from './components/Services/Services';
+import BackgroundLaptop from './components/Background/BackgroundLaptop';
  
  
  function App() {
@@ -30,6 +31,7 @@ import { Services } from './components/Services/Services';
          <WelcomeScreen onEnter={() => setEntered(true)} /> 
        ) : (<>
          <Navbar />
+         <BackgroundLaptop   />
          <Hero    />
          <About   />
          <Skills    />

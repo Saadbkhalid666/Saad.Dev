@@ -12,7 +12,7 @@ export const About = () => {
     <div className="py-12 px-6 ">
       {/* ABOUT ME SECTION */}
       <section id="about">
-        <div className="flex flex-col items-center justify-center gap-4 mb-8 px-4">
+        <div className="flex flex-col  gap-4 mb-8 px-4">
           <div className="flex items-center gap-2 mb-4">
             <FaUser
               className="w-8 h-8 text-[#ffff70] hover:text-yellow-400 transition-all"
@@ -26,7 +26,7 @@ export const About = () => {
             </h2>
           </div>
 
-          <div className="about-container w-full md:w-[60%] text-center px-4 mb-30">
+          <div className="about-container w-full md:w-[60%]  px-4 mb-30">
             <p
               className="text-lg md:text-xl text-white leading-relaxed"
               data-aos="flip-left"
