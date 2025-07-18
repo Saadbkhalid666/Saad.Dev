@@ -11,3 +11,22 @@ height: 4rem;
 background-color: blue;
 }
 
+@keyframes typing {
+                      0% { width: 0 }
+              50% { width: 100% }
+              100% { width: 0 }
+            }
+
+            @keyframes blink {
+              50% { border-color: transparent }
+            }
+
+            .typing-heading {
+              display: inline-block;
+              white-space: nowrap;
+              overflow: hidden;
+              border-right: 2px solid #ffff70;
+              animation:
+                typing 6s steps(40, end) infinite,
+                blink 0.8s step-end infinite;
+            }
