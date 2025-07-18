@@ -11,16 +11,22 @@ import { Projects } from "./sections/Projects/Projects";
 import { Contact } from "./sections/Contact/Contact";
 import { Footer } from "./sections/Footer/Footer";
 import { Services } from "./sections/Services/Services";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 function App() {
   const [entered, setEntered] = useState(false);
-
+  
   useEffect(() => {
     const hasPlayed = sessionStorage.getItem("WelcomeAudioPlayed");
     if (hasPlayed) {
       setEntered(true); // If the audio was already played, show Navbar directly
     }
   }, []); // Empty dependency array to run only once on component mount
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <>
