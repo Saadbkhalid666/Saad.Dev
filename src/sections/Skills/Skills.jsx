@@ -2,10 +2,9 @@ import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, 
   } from 'react-icons/fa';
   import { SiMongodb, SiTailwindcss, SiExpress, SiDjango } from 'react-icons/si';
-  import { SkillCard } from '../Skill Card/SkillCard';
 import { useEffect } from 'react';
 import AOS from "aos"
-  
+import {SkillCard} from "../../components/Skill Card/SkillCard"  
   const skills = [
     { icon: FaHtml5, title: 'HTML5', percentage: 95, color: '#e34c26' },
     { icon: FaCss3Alt, title: 'CSS3', percentage: 90, color: '#264de4' },
