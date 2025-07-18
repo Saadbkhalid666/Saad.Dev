@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../assets/images/remove-bg-logo.png"
+import logo from "../../assets/images/logo-without-bg.png"
 import Loader from "../../components/Loader/Loader"
 import sound from "../../assets/audio/welcomevoice.mp3"
 export const WelcomeScreen = ({ onEnter }) => {

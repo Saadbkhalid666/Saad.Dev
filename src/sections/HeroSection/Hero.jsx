@@ -1,5 +1,5 @@
 import "./Hero.css";
-import img from "../../assets/images/my-image.webp"
+import img from "../../assets/images/my-image.png"
 export const Hero = () => {
   return (
     <section id="home">
