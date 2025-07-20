@@ -44,7 +44,7 @@ export const Hero = () => {
           <img
             src={img}
             alt="my-image"
-            className="w-[60%] filter drop-shadow-[10px_10px_20px_rgba(0,0,0,0.5)] rounded-full brightness-90 contrast-125 hover:saturate-150 transition-all duration-300 ease-in-out ring-2 ring-offset-2 ring-purple-700 hover:ring-4 backdrop-blur-sm object-cover animate-[float_3s_ease-in-out_infinite]"
+            className="image-rings w-[60%] filter drop-shadow-[20px_20px_30px_rgba(0,0,0,0.5)] rounded-full brightness-90 contrast-125 saturate-100 transition-all duration-300 ease-in-out hover:scale-110 backdrop-blur-sm object-cover animate-[float_3s_ease-in-out_infinite] cursor-pointer"
           />
         </div>
       </div>

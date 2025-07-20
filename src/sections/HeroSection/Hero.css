@@ -1,3 +1,8 @@
+:root{
+  --highlightColor: rgba(168, 85, 247, 1)
+}
+
+
 .heading{
     position: relative;
 }
@@ -30,3 +35,32 @@ background-color: blue;
                 typing 6s steps(40, end) infinite,
                 blink 0.8s step-end infinite;
             }
+
+
+@keyframes rings {
+  0% {
+    box-shadow: 0 0 0 1px white, 
+                0 0 0 2px var(--highlightColor);
+  }
+  25% {
+    box-shadow: 0 0 0 2px white, 
+                0 0 0 4px var(--highlightColor);
+  }
+  50% {
+    box-shadow: 0 0 0 3px white, 
+                0 0 0 6px var(--highlightColor);
+  }
+  75% {
+    box-shadow: 0 0 0 2px white, 
+                0 0 0 4px var(--highlightColor);
+  }
+  100% {
+    box-shadow: 0 0 0 1px white, 
+                0 0 0 2px var(--highlightColor) ;
+  }
+}
+
+.image-rings {
+  animation: rings 3s infinite ease-in-out;
+}
+
