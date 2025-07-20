@@ -13,14 +13,16 @@ export const About = () => {
       {/* ABOUT ME SECTION */}
       <section data-aos="fade" id="about" className="   ">
         <div className="container flex flex-row w-full h-full">
-          <div className="image-container w-full h-full">
+          <div className="image-container hidden md:block w-full h-full">
             <img src={abtimg} alt="About Image" className="w-[80%]" />
           </div>
           <div className="content-container">
-            <h1 className="text-4xl pb-2 text-white flex flex-row">
-              <FaUser />
+            <h1 className="relative text-4xl pb-2 text-[#ffff70] flex flex-row items-center group w-[max-content] cursor-pointer">
+              <FaUser className="mr-2" />
               Me & MySelf
+              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-[#ffff70] origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
             </h1>
+
             <p
               className="text-lg md:text-xl text-white leading-relaxed"
               data-aos="flip-left"
