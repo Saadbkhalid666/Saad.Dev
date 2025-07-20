@@ -42,11 +42,9 @@ export const Hero = () => {
           }}
         >
           <img
-            data-aos="fade-up"
-            data-aos-delay={100}
             src={img}
             alt="my-image"
-            className="w-[80%]   object-cover"
+            className="w-[60%] filter drop-shadow-[10px_10px_20px_rgba(0,0,0,0.5)] rounded-full brightness-90 contrast-125 hover:saturate-150 transition-all duration-300 ease-in-out ring-2 ring-offset-2 ring-purple-700 hover:ring-4 backdrop-blur-sm object-cover animate-[float_3s_ease-in-out_infinite]"
           />
         </div>
       </div>
