@@ -11,13 +11,13 @@ export const About = () => {
   return (
     <div className="py-12 mt-16 px-6 ">
       {/* ABOUT ME SECTION */}
-      <section id="about" className="  w-full h-screen overflow-hidden">
+      <section data-aos="fade" id="about" className="   ">
         <div className="container flex flex-row w-full h-full">
           <div className="image-container w-full h-full">
             <img src={abtimg} alt="About Image" className="w-[80%]" />
           </div>
           <div className="content-container">
-            <h1 className="text-4xl text-white flex flex-row">
+            <h1 className="text-4xl pb-2 text-white flex flex-row">
               <FaUser />
               Me & MySelf
             </h1>
@@ -122,46 +122,95 @@ export const About = () => {
       </section>
 
       {/* EDUCATION SECTION */}
-      <section id="education">
-        <h2 className="text-3xl font-bold mb-8 text-center text-[#ffff70]">
-          🎓 My Education
+      <section id="education" className="py-16 mt-12 px-6">
+        <h2 className="text-3xl font-bold mb-12 text-center text-[#ffff70] tracking-wide">
+          🎓 My Learning Journey
         </h2>
 
-        <div className="relative border-l-4 border-[#ffff70] pl-6 ml-2 space-y-12">
-          {[
-            {
-              title: "FULL STACK DEVELOPER",
-              year: "2024 – 2025",
-              status: "Completed",
-            },
-            {
-              title: "MERN STACK DEVELOPER – Codehelp",
-              year: "2024 – 2025",
-              status: "Completed",
-            },
-            {
-              title: "FREELANCE GRADUATE – DigiSkills",
-              year: "2024",
-              status: "Completed",
-            },
-            {
-              title: "Intermediate – Punjab Group of Colleges",
-              year: "2024 – 2025",
-              status: "Currently studying Pre-Engineering. Age: 16",
-            },
-            {
-              title: "Matric – BALAD UL ILM SCHOOL SYSTEM",
-              year: "2022 – 2024",
-              status: "Completed Matric with Science subjects.",
-            },
-          ].map((edu, idx) => (
-            <div className="relative" data-aos="fade-right" key={idx}>
-              <div className="w-4 h-4 bg-[#ffff70] rounded-full transition-opacity duration-1000 opacity-100"></div>
-              <h3 className="text-xl font-semibold text-white">{edu.title}</h3>
-              <span className="text-gray-400 text-sm">{edu.year}</span>
-              <p className="text-gray-300 mt-1">{edu.status}</p>
-            </div>
-          ))}
+        <div className="relative border-l-4 border-[#ffff70] pl-6 ml-2 space-y-16">
+          {/* FULL STACK */}
+          <div className="relative" data-aos="fade-right">
+            <div className="w-4 h-4 bg-[#ffff70] rounded-full  "></div>
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              🧑‍💻 Full Stack Developer
+              <span className="text-xs bg-green-600 text-white px-2 py-0.5 rounded-full">
+                Completed
+              </span>
+            </h3>
+            <span className="text-gray-400 text-sm">2024 – 2025</span>
+            <p className="text-gray-300 mt-1">
+              Mastered full-stack web development using modern technologies
+              including React, Node.js, MongoDB, Python, and Django.
+            </p>
+          </div>
+
+          {/* MERN */}
+          <div className="relative" data-aos="fade-right">
+            <div className="w-4 h-4 bg-[#ffff70] rounded-full  "></div>
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              🧑‍💻 MERN Stack Developer – CodeHelp
+              <span className="text-xs bg-green-600 text-white px-2 py-0.5 rounded-full">
+                Completed
+              </span>
+            </h3>
+            <span className="text-gray-400 text-sm">2024 – 2025</span>
+            <p className="text-gray-300 mt-1">
+              Built real-world projects with MongoDB, Express, React, and
+              Node.js. Gained strong experience in building full-stack apps.
+            </p>
+          </div>
+
+          {/* DIGISKILLS */}
+          <div className="relative" data-aos="fade-right">
+            <div className="w-4 h-4 bg-[#ffff70] rounded-full  "></div>
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              💼 Freelance Graduate – DigiSkills
+              <span className="text-xs bg-green-600 text-white px-2 py-0.5 rounded-full">
+                Completed
+              </span>
+            </h3>
+            <span className="text-gray-400 text-sm">2024</span>
+            <p className="text-gray-300 mt-1">
+              Learned the principles of freelancing, client communication,
+              bidding, and project handling — now offering professional web
+              solutions.
+            </p>
+          </div>
+
+          {/* INTERMEDIATE */}
+          <div className="relative" data-aos="fade-right">
+            <div className="w-4 h-4 bg-[#ffff70] rounded-full  "></div>
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              📘 Intermediate – Punjab Group of Colleges
+              <span className="text-xs bg-yellow-600 text-white px-2 py-0.5 rounded-full">
+                In Progress
+              </span>
+            </h3>
+            <span className="text-gray-400 text-sm">2024 – 2025</span>
+            <p className="text-gray-300 mt-1">
+              Currently pursuing Pre-Engineering. Balancing academic excellence
+              with passion for development. Age: 16
+            </p>
+          </div>
+
+          {/* MATRIC */}
+          <div className="relative" data-aos="fade-right">
+            <div className="w-4 h-4 bg-[#ffff70]  rounded-full   "></div>
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              🏫 Matric – Balad ul Ilm School System
+              <span className="text-xs bg-green-600 text-white px-2 py-0.5 rounded-full">
+                Completed
+              </span>
+            </h3>
+            <span className="text-gray-400 text-sm">2022 – 2024</span>
+            <p className="text-gray-300 mt-1">
+              Completed Matriculation in Computer Science. Honored as{" "}
+              <span className="text-[#ffff70] font-semibold">
+                Student of the Year
+              </span>{" "}
+              twice for academic brilliance and discipline.
+            </p>
+          </div>
         </div>
       </section>
     </div>
