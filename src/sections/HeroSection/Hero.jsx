@@ -5,7 +5,6 @@ export const Hero = () => {
     <section id="home" className="w-full h-screen overflow-hidden">
       <div className="relative w-full h-full flex flex-col lg:flex-row">
 
-        {/* Centered Image for Small screens  */}
         {/* Left Side - Black background always visible */}
         <div
           data-aos="fade-right"
@@ -14,7 +13,8 @@ export const Hero = () => {
             backgroundColor: "#000",
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
           }}
-        >
+          >
+          {/* Centered Image for Small screens  */}
         <div className="image-container lg:hidden flex justify-center mb-12   ">
           <img src={img} alt="my-image" className="image-rings md:w-[30%] w-[60%] filter drop-shadow-[20px_20px_30px_rgba(0,0,0,0.5)] rounded-full brightness-90 contrast-125 saturate-100 transition-all duration-300 ease-in-out hover:scale-110 backdrop-blur-sm object-cover animate-[float_3s_ease-in-out_infinite] cursor-pointer bg-[#ffff70] " />
         </div>
