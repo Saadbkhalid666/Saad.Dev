@@ -46,7 +46,7 @@ export const Hero = () => {
             data-aos-delay={100}
             src={img}
             alt="my-image"
-            className="w-[80%] absolute bottom-0 object-cover"
+            className="w-[80%]   object-cover"
           />
         </div>
       </div>
