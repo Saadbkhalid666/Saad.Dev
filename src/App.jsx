@@ -13,6 +13,7 @@ import { Services } from "./sections/Services/Services";
 import AOS from "aos";
 import {SkillsSection} from "./sections/Skills/Skills"
 import "aos/dist/aos.css";
+import { FaChevronUp } from "react-icons/fa";
 
 
 function App() {
@@ -42,6 +43,15 @@ function App() {
           <Projects />
           <Contact />
           <Footer />
+          <div
+  className="fixed bottom-6 right-6 z-50 cursor-pointer bg-yellow-400 text-white rounded-full p-4 shadow-lg animate-spin-slow hover:scale-110 transition-transform duration-300"
+  onClick={() => {
+    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  <FaChevronUp className="text-2xl drop-shadow-glow" />
+</div>
+
         </>
       )}
     </>

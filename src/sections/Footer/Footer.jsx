@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: <FaGithub />, link: "https://github.com/SaadRajpoot666/", color: "text-white" },
+  { icon: <FaGithub />, link: "https://github.com/Saadbkhalid666/", color: "text-white" },
   { icon: <FaLinkedin />, link: "https://linkedin.com/in/saadbinkhalid666", color: "text-blue-500" },
   { icon: <FaTwitter />, link: "https://x.com/saadrajpoot666", color: "text-cyan-400" },
   { icon: <FaInstagram />, link: "https://instagram.com/sagit_saad", color: "text-pink-500" },

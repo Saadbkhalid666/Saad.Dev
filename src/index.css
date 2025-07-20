@@ -16,18 +16,9 @@ body{
   }
   /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ffff70;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #e0e05a;
-}
+ 
+ 
+ 
