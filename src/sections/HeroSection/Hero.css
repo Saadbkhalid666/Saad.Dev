@@ -39,24 +39,24 @@ background-color: blue;
 
 @keyframes rings {
   0% {
-    box-shadow: 0 0 0 1px white, 
-                0 0 0 2px var(--highlightColor);
+    box-shadow: 0 0 0 2px white, 
+                0 0 0 3px var(--highlightColor);
   }
   25% {
-    box-shadow: 0 0 0 2px white, 
-                0 0 0 4px var(--highlightColor);
+    box-shadow: 0 0 0 3px white, 
+                0 0 0 5px var(--highlightColor);
   }
   50% {
     box-shadow: 0 0 0 3px white, 
-                0 0 0 6px var(--highlightColor);
+                0 0 0 8px var(--highlightColor);
   }
   75% {
-    box-shadow: 0 0 0 2px white, 
-                0 0 0 4px var(--highlightColor);
+    box-shadow: 0 0 0 3px white, 
+                0 0 0 5px var(--highlightColor);
   }
   100% {
-    box-shadow: 0 0 0 1px white, 
-                0 0 0 2px var(--highlightColor) ;
+    box-shadow: 0 0 0 2px white, 
+                0 0 0 3px var(--highlightColor) ;
   }
 }
 
