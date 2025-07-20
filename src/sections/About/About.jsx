@@ -2,31 +2,25 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaUser } from "react-icons/fa";
-
+import abtimg from "../../assets/images/about-image.jpg";
 export const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   return (
-    <div className="py-12 px-6 ">
+    <div className="py-12 mt-16 px-6 ">
       {/* ABOUT ME SECTION */}
-      <section id="about">
-        <div className="flex flex-col  gap-4 mb-8 px-4">
-          <div className="flex items-center gap-2 mb-4">
-            <FaUser
-              className="w-8 h-8 text-[#ffff70] hover:text-yellow-400 transition-all"
-              data-aos="fade"
-            />
-            <h2
-              className="text-3xl font-bold text-[#ffff70]"
-              data-aos="fade-down"
-            >
-              About Me
-            </h2>
+      <section id="about" className="  w-full h-screen overflow-hidden">
+        <div className="container flex flex-row w-full h-full">
+          <div className="image-container w-full h-full">
+            <img src={abtimg} alt="About Image" className="w-[80%]" />
           </div>
-
-          <div className="about-container w-full md:w-[60%]  px-4 mb-30">
+          <div className="content-container">
+            <h1 className="text-4xl text-white flex flex-row">
+              <FaUser />
+              Me & MySelf
+            </h1>
             <p
               className="text-lg md:text-xl text-white leading-relaxed"
               data-aos="flip-left"
@@ -35,41 +29,93 @@ export const About = () => {
               <span className="font-semibold text-[#ffff70]">
                 Saad Bin Khalid
               </span>
-              , a 16-year-old full-stack web developer from{" "}
-              <span className="text-[#ffff70] font-semibold">Lahore, Pakistan</span>. I completed my matric in{" "}
-              <span className="text-[#ffff70] font-semibold">
-                Computer Science
+              — a{" "}
+              <span className="font-semibold text-[#ffff70]">
+                16-year-old full-stack web developer
               </span>{" "}
-              from Balad ul Ilm School System, where I was proudly{" "}
-              <span className="text-[#ffff70] font-semibold">
+              based in{" "}
+              <span className="font-semibold text-[#ffff70]">
+                Lahore, Pakistan
+              </span>
+              . I specialize in building responsive, high-performance web
+              applications with a clean UI, strong backend, and seamless user
+              experience.
+              <br />
+              <br />
+              My journey into the world of coding began during{" "}
+              <span className="font-semibold text-[#ffff70]">9th grade</span>,
+              when I discovered the magic of HTML and CSS. From that moment, I
+              knew that technology would be my passion and my purpose.
+              <br />
+              <br />I completed my{" "}
+              <span className="font-semibold text-[#ffff70]">
+                Matriculation in Computer Science
+              </span>{" "}
+              from Balad ul Ilm School System, where I was honored to be named{" "}
+              <span className="font-semibold text-[#ffff70]">
                 Student of the Year
               </span>{" "}
-              twice.
+              twice in a row. After finishing my matric exams in{" "}
+              <span className="font-semibold text-[#ffff70]">March 2024</span>,
+              I fully dedicated myself to mastering web development. By{" "}
+              <span className="font-semibold text-[#ffff70]">May 2025</span>, I
+              had successfully completed several real-world projects that
+              combined both frontend and backend technologies.
               <br />
-              After my matric exams in{" "}
-              <span className="text-[#ffff70] font-semibold">March 2024</span>,
-              I started my journey in web development and completed it by{" "}
-              <span className="text-[#ffff70] font-semibold">May 2025</span>.
-              Since then, I have built several projects including{" "}
-              <span className="text-[#ffff70] font-semibold">KS Traders</span>{" "}
-              (an e-commerce website) and a real-time{" "}
-              <span className="text-[#ffff70] font-semibold">Weather App</span>.
               <br />
-              I love turning ideas into real-world digital solutions and enjoy working with both frontend and backend technologies.
-              <br />
-              My tech stack includes:{" "}
-              <span className="text-[#ffff70] font-semibold">
-                HTML, CSS, Tailwind CSS, JavaScript, React
-              </span>
-              ,{" "}
-              <span className="text-[#ffff70] font-semibold">
-                Node.js, Express, MongoDB, Python
+              Some of my highlighted projects include:
+              <span className="font-semibold text-[#ffff70]">
+                KS Traders
               </span>{" "}
-              and{" "}
-              <span className="text-[#ffff70] font-semibold">Django</span>.
+              (an advanced e-commerce website), a real-time{" "}
+              <span className="font-semibold text-[#ffff70]">Weather App</span>,
+              <span className="font-semibold text-[#ffff70]">AutoLog.AI</span>{" "}
+              (a smart vehicle service tracking platform using AI and OCR), and
+              <span className="font-semibold text-[#ffff70]">ChatWat</span> (a
+              full-stack real-time chat application with custom authentication
+              and admin dashboard).
               <br />
-              <span className="text-[#ffff70] font-semibold">I love to code</span>{" "}
-              and I’m always excited to learn and build more. 🚀
+              <br />
+              I provide end-to-end web development services — from crafting
+              beautiful landing pages to building dynamic dashboards, admin
+              panels, and API-integrated web systems. My code is clean,
+              scalable, and always optimized for performance and SEO.
+              <br />
+              <br />
+              <span className="font-semibold text-[#ffff70]">
+                My tech stack includes:
+              </span>
+              <br />
+              <span className="font-semibold text-[#ffff70]">
+                Frontend:
+              </span>{" "}
+              HTML5, CSS3, Tailwind CSS, JavaScript, TypeScript, React.js,
+              Angular
+              <br />
+              <span className="font-semibold text-[#ffff70]">
+                Backend:
+              </span>{" "}
+              Node.js, Express.js, MongoDB, Python, Django
+              <br />
+              <span className="font-semibold text-[#ffff70]">
+                Tools & Extras:
+              </span>{" "}
+              Git, GitHub, Vercel, Figma, REST APIs, JWT Auth, Socket.IO
+              <br />
+              <br />
+              I'm deeply passionate about solving problems through technology
+              and turning client ideas into real digital products. I believe in
+              continuous learning, creative thinking, and delivering quality
+              over quantity — every single time.
+              <br />
+              <br />
+              <span className="font-semibold text-[#ffff70]">
+                If you're looking for a reliable, hardworking, and passionate
+                web developer to bring your next idea to life — I’m ready to
+                help you build it.
+              </span>
+              <br />
+              Let’s work together and create something impactful. 🚀
             </p>
           </div>
         </div>
